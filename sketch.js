@@ -12,13 +12,21 @@ function preload(){
 }
 
 function setup(){
-    console.log(weather.value);
+    console.log(weather);
   console.log("Location: Plymouth" );
+  console.log("Sunrise: " + weather.sys.sunrise);
+  console.log("Sunset: " + weather.sys.sunset);
   console.log("Temperature: " + weather.main.temp + "°C");
   console.log("Temperature (min): " + weather.main.temp_min + "°C");
   console.log("Temperature (max): " + weather.main.temp_max + "°C");
   console.log("Humidity: " + weather.main.humidity);
   console.log("Pressure: " + weather.main.pressure);
+  console.log("Cloudiness: "+ weather.clouds.all + "%") ;
+  console.log("Rainfall: " + weather.rain);
+  console.log("Snowfall: " + weather.snow);
+  console.log("Windspeed: "+ weather.wind.speed*2.23693629 + " Mph");
+
+
 }
 
 function draw(){
